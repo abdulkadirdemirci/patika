@@ -49,6 +49,48 @@ küçükten başlayarak aramak lazımdır. 18 sayısı en buyuk degerli sayımı
 | 500.000 İŞLEM SAYISI FARK OLACAKTIR.                                                                                           |
 +--------------------------------------------------------------------------------------------------------------------------------+
 
+[7,3,5,8,2,9,4,15,6]
+
+1.ADIM: 7 < 3  >> HAYIR. min=3
+2.ADIM: 3 < 5  >> EVET.  min=3
+3.ADIM: 3 < 8  >> EVET.  min=3
+4.ADIM: 3 < 2  >> HAYIR. min=2
+5.ADIM: 2 < 9  >> EVET.  min=2
+6.ADIM: 2 < 4  >> EVET.  min=2
+7.ADIM: 2 < 15 >> EVET.  min=2
+8.ADIM: 2 < 6  >> EVET.  min=2 -- tüm dizi bastan sona gezildi. sıra 2 hariç baştan sona gezmek.(n-1)
+9.ADIM: 7 < 3  >> HAYIR. min=3
+10.ADIM: 3 < 5  >> EVET. min=3
+11.ADIM: 3 < 8  >> EVET. min=3
+12.ADIM: 3 < 9  >> EVET. min=3
+13.ADIM: 3 < 4  >> EVET. min=3
+14.ADIM: 3 < 15 >> EVET. min=3
+15.ADIM: 3 < 6  >> EVET. min=3 -- tüm dizi bastan sona gezildi. sıra 2 ve 3 hariç baştan sona gezmek.(n-2)
+16.ADIM: 7 < 5  >> HAYIR. min=5
+17.ADIM: 5 < 8  >> EVET.  min=5
+18.ADIM: 5 < 9  >> EVET.  min=5
+19.ADIM: 5 < 4  >> HAYIR. min=4
+20.ADIM: 4 < 15 >> EVET.  min=4
+21.ADIM: 4 < 6  >> EVET.  min=4 -- tüm dizi bastan sona gezildi. sıra 2, 3 VE 4  hariç baştan sona gezmek.(n-3)
+22.ADIM: 7 < 5  >> HAYIR. min=5
+23.ADIM: 5 < 8  >> EVET.  min=5       [7,3,5,8,2,9,4,15,6]
+24.ADIM: 5 < 9  >> EVET.  min=5
+25.ADIM: 5 < 15 >> EVET.  min=5
+26.ADIM: 5 < 6  >> EVET.  min=5 -- tüm dizi bastan sona gezildi. sıra 2, 3, 4 VE 5  hariç baştan sona gezmek.(n-4)
+27.ADIM: 7 < 8  >> EVET.  min=7
+28.ADIM: 7 < 9  >> EVET.  min=7
+29.ADIM: 7 < 15 >> EVET.  min=7
+30.ADIM: 7 < 6  >> HAYIR. min=6 -- tüm dizi bastan sona gezildi. sıra 2, 3, 4, 5 VE 6  hariç baştan sona gezmek.(n-5)
+31.ADIM: 7 < 8  >> EVET.  min=7
+32.ADIM: 7 < 9  >> EVET.  min=7
+33.ADIM: 7 < 15 >> EVET.  min=7 -- tüm dizi bastan sona gezildi. sıra 2, 3, 4, 5, 6 VE 7 hariç baştan sona gezmek.(n-6)
+34.ADIM: 8 < 9  >> EVET.  min=8
+35.ADIM: 8 < 15 >> EVET.  min=8 -- tüm dizi bastan sona gezildi. sıra 2, 3, 4, 5, 6,7 VE 8 hariç baştan sona gezmek.(n-7)
+36.ADIM: 9 < 15 >> EVET.  min=9 -- tüm dizi bastan sona gezildi. sıra 2, 3, 4, 5, 6,7, 8 VE 9 hariç baştan sona gezmek.(n-8) VE 15 EN SONA KALIR.
+[2 3 4 5 6 7 8 9 15]
+
+(N-1)*(N) / 2 = 8*9/2 = 36  ===> (1/2)N^2 - (1/2)N  O(N^2)
+
 
 
 

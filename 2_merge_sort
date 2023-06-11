@@ -1,0 +1,44 @@
+Proje 2
+[16,21,11,8,12,22] -> Merge Sort
+
+Yukarıdaki dizinin sort türüne göre aşamalarını yazınız.
+Big-O gösterimini yazınız.
+
+                      [16 21 11 8 12 22]
+                 
+             [16 21 11]                [8 12 22]
+          
+      [16 21]         [11]       [8 12]        [22]
+   
+  [16]      [21]      [11]    [8]     [12]     [22] ----- bu aşamadan sonra merge işlemi başlıyor.
+  
+     [16 21]             [8 11]          [12 22]  ------>  en kötü senaryo için n eleman için n-1 sorgu yapılır.
+                                            |
+             16 < 8?                        |
+             [8                             |
+             16 < 11?                      \|/
+             [8 11 16 21]                [12 22]
+                           8 < 12?
+                           [8
+                           11 < 12
+                           [8 11
+                           16 < 12?
+                           [8 11 12
+                           16 < 22?
+                           [8 11 12 16
+                           21 < 22?
+                           [8 11 12 16 21 22]
+                          
+1 er elemanlı listeler olana kadar parçalandıktan sonra her seferinde 2 katına cıkan sıralı liste saıyısı
+2^x=n den  logn kez tekrarlanarak birleştirilir.
+ve he birleştirme işlemi esnasında n elemanl alt listeyı sıralamak için n-1 adet sorgu yapılır.
+
+logn * (n-1) = nlogn - logn  ====>  O(nlogn)   olarak bulunur.
+
++-----------------------------------------------------------------------------------------------+
+|  !! NOT: HATTA EN DOGRU İŞLEM SAYISI ŞU ŞEKİLDE İFADE EDİLİR:                                 |
+|  LİSTEYİ 1 ELEMANLI OLACAK ŞEKİLDE PARÇALAMAK İÇİN LOGN KEZ İŞLEM YAPILIR.                    |
+|  2.AŞAMADA BİRLEŞTİRİRKEN DE LOGN KEZ İŞLEM YAPILMAKLA BERABER BU SEFER HER İŞLEM BAŞINA      |
+|  N-1 ADET SIRALAMA YAPMAK İÇİN İŞLEM DE YAPILMIŞ OLACAGINDAN 2.AŞAMADA LOGN*(N-1) ADET İŞELM  |
+|  YAPILMIŞ OLUR. TOPLAMDA İSE LOGN + LOGN*(N-1) ADET İŞELEM YAPILIŞ OLUR.                      |
++-----------------------------------------------------------------------------------------------+          
